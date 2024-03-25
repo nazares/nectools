@@ -1,6 +1,6 @@
 <?php
 
-namespace application\core;
+namespace App\Core;
 
 class View
 {
@@ -17,12 +17,12 @@ class View
     public function render($title, $vars = [])
     {
         extract($vars);
-        $path = '../application/views/' . $this->path . '.php';
+        $path = '../app/views/' . $this->path . '.php';
         if (file_exists($path)) {
             ob_start();
             require $path;
             $content = ob_get_clean();
-            require '../application/views/layouts/' . $this->layout . '.php';
+            require '../app/views/layouts/' . $this->layout . '.php';
         } else {
             View::httpErrorCode(404);
         }
@@ -47,7 +47,7 @@ class View
     public static function httpErrorCode($code)
     {
         http_response_code($code);
-        $path = '../application/views/errors/' . $code . '.php';
+        $path = '../app/views/errors/' . $code . '.php';
 
         if (file_exists($path)) {
             require $path;

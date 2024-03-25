@@ -1,13 +1,14 @@
 <?php
 
-namespace application\controllers;
+namespace App\Controllers;
 
-use application\core\Controller;
-use application\models\Main;
+use App\Core\Controller;
+use App\Models\Main;
 
 class MainController extends Controller
 {
     public $data;
+    public $model;
 
     public function indexAction()
     {

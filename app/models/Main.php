@@ -1,9 +1,9 @@
 <?php
 
-namespace application\models;
+namespace app\models;
 
-use application\core\Model;
-use application\libs\NEC;
+use app\core\Model;
+use app\libs\NEC;
 
 class Main extends Model
 {

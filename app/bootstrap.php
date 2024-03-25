@@ -1,6 +1,6 @@
 <?php
 
-use application\core\Router;
+use app\core\Router;
 
 spl_autoload_register(function ($className) {
     $path = '../' . str_replace('\\', '/', $className) . '.php';

@@ -1,10 +1,11 @@
 <?php
 
-namespace application\core;
+namespace App\Core;
 
 abstract class Controller
 {
-    // public $route;
+    public array $route;
+    public $model;
     public $view;
 
     public function __construct($route)
@@ -16,7 +17,7 @@ abstract class Controller
 
     public function loadModel($name)
     {
-        $model = 'application\models\\' . ucfirst($name);
+        $model = 'app\models\\' . ucfirst($name);
         if (class_exists($model)) {
             return new $model();
         }

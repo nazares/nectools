@@ -1,5 +1,5 @@
 <?php
 
-error_reporting(0);
+// error_reporting(0);
 
-require_once '../application/bootstrap.php';
+require_once '../app/bootstrap.php';

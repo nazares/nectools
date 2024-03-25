@@ -1,6 +1,6 @@
 <?php
 
-namespace application\libs;
+namespace app\libs;
 
 class NEC
 {

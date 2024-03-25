@@ -1,6 +1,6 @@
 <?php
 
-namespace application\core;
+namespace App\Core;
 
 class Router
 {
@@ -22,7 +22,7 @@ class Router
             unset($url[0], $url[1]);
         }
 
-        $controller = 'application\controllers\\' . ucfirst($this->controller) . 'Controller';
+        $controller = 'app\controllers\\' . ucfirst($this->controller) . 'Controller';
         $action = $this->action . 'Action';
         $route = ['controller' => $this->controller, 'action' => $this->action];
         $this->params = $url ? array_values($url) : [];

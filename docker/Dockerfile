@@ -1,6 +1,6 @@
 FROM php:8.2-apache
 WORKDIR /var/www/html
-COPY application/ application
+COPY app/ app
 COPY public/ public
 
 COPY .htaccess .htaccess
