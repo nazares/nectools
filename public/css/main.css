@@ -162,6 +162,10 @@ footer {
     user-select: none;
 }
 
+.logo {
+    height: 50px;
+}
+
 .logo svg {
-    height: 3.125rem;
+    height: 100%;
 }
