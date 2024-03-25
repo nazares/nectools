@@ -1,3 +1,10 @@
+:root {
+    --main-color: hsl(204, 100%, 50%);
+    --text-clr-white: hsl(0, 0%, 94%);
+    --text-clr-grey: hsl(0, 0%, 33%);
+    --border-color: hsla(0, 0%, 20%, 0.2);
+}
+
 html, body {
     height: 100vh;
     margin: 0;
@@ -12,10 +19,10 @@ body {
 }
 
 .title {
-    color: #555;
+    color: var(--text-clr-grey);
     font: 1rem monospace;
     text-align: center;
-    border-bottom:1px solid #3333;
+    border-bottom:1px solid var(--border-color);
     padding: 0 0 .9rem 0;
     /* font-weight: 900; */
 }
@@ -45,7 +52,7 @@ form textarea {
     height: calc(100vh - 230px);
     /* height: 100%; */
     margin: 0 0 1rem 0;
-    border: 1px solid #8885;
+    border: 1px solid var(--border-color);
     border-radius: 1rem;
     padding:1rem;
     outline: none;
@@ -54,26 +61,27 @@ form textarea {
 }
 
 form textarea:focus {
-    border-color: rgb(0, 153, 255);
+    border-color: var(--main-color);
 }
 
 input[type=submit] {
     padding: .5rem;
     appearance: none;
-    background: rgb(0, 153, 255);
+    background: var(--main-color);
     border:none;
     border-radius: .3rem;
-    color: #fff;
+    color: var(--text-clr-white);
     font-weight: 900;
 }
 
 input[type=submit]:hover {
-    background: rgba(0, 153, 255, 0.74);
+    background: var(--main-color);
+    opacity: 0.74;
 }
 
 input[type=text] {
     padding: .5rem;
-    border: 1px solid #5555;
+    border: 1px solid var(--border-color);
     border-radius: .5rem;
     user-select: none;
 }
@@ -92,7 +100,7 @@ input[type=text] {
 .form__item label {
     font-family: monospace;
     font-size: .75rem;
-    color: #0009;
+    color: var(--text-clr-grey);
     user-select: none;
 }
 
@@ -115,7 +123,7 @@ table td {
 
 table td {
 
-    border: 1px solid #8885;
+    border: 1px solid var(--border-color);
     text-align:center;
 }
 
@@ -128,9 +136,9 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0 10%;
-    background: rgb(0, 153, 255);
+    background: var(--main-color);
     user-select: none;
-    color: #fff;
+    color: var(--text-clr-white);
 
 }
 
@@ -145,7 +153,7 @@ nav ul li {
 nav ul li a {
     padding: .5rem;
     text-decoration: none;
-    color: #fff;
+    color: var(--text-clr-white);
     font-family: monospace;
 }
 
@@ -158,7 +166,7 @@ footer {
     padding: 0 2%;
     font-size: .7rem;
     font-family: monospace;
-    color: #0009;
+    color: var(--text-clr-grey);
     user-select: none;
 }
 
