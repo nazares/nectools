@@ -92,7 +92,7 @@ input[type=text] {
 .form__item label {
     font-family: monospace;
     font-size: .75rem;
-    color: #0009; 
+    color: #0009;
     user-select: none;
 }
 
@@ -102,7 +102,7 @@ table {
 
 table th,td {
     padding:.5rem;
-    font:1rem monospace;    
+    font:1rem monospace;
 }
 
 table th {
@@ -114,7 +114,7 @@ table td {
 }
 
 table td {
-    
+
     border: 1px solid #8885;
     text-align:center;
 }
@@ -131,7 +131,7 @@ header {
     background: rgb(0, 153, 255);
     user-select: none;
     color: #fff;
-    
+
 }
 
 nav ul {
@@ -160,4 +160,8 @@ footer {
     font-family: monospace;
     color: #0009;
     user-select: none;
+}
+
+.logo svg {
+    height: 3.125rem;
 }
