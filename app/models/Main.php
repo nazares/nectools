@@ -9,14 +9,14 @@ class Main extends Model
 {
     public function getData($post)
     {
-        $name = new NEC();
+        // $name = new NEC();
 
         $data = array_values(array_filter(explode(PHP_EOL, $post['data'])));
         foreach ($data as $item) {
             $items[] = explode(',', $item);
         }
         foreach ($items as $key => $value) {
-            $out[] = ['phone' => $value[0], 'name' => $name->convert(trim($value[1], ' '))];
+            $out[] = ['phone' => $value[0], 'name' => NEC::encode(trim($value[1], ' ')), 'decode' => NEC::decode(NEC::encode(trim($value[1], ' ')))];
         }
 
         return $out;

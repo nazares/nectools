@@ -11,6 +11,9 @@
                 <th>Code</th>
                 <th>Phone</th>
                 <th>Converted</th>
+                <th>Len</th>
+                <th>Decode</th>
+                <th>Len</th>
             </tr>
 
             <?php foreach ($data as $value) : ?>
@@ -18,11 +21,17 @@
                     <td>770</td>
                     <td><?php echo trim($value['phone'], ' '); ?></td>
                     <td><?php echo $value['name']; ?></td>
+                    <td><?php echo mb_strlen($value['name']); ?></td>
+                    <td><?php echo $value['decode']; ?></td>
+                    <td><?php echo mb_strlen($value['decode']); ?></td>
                 </tr>
                 <tr>
                     <td>775</td>
                     <td><?php echo $value['phone']; ?></td>
                     <td><?php echo $value['name']; ?></td>
+                    <td><?php echo mb_strlen($value['name']); ?></td>
+                    <td><?php echo $value['decode']; ?></td>
+                    <td><?php echo mb_strlen($value['decode']); ?></td>
                 </tr>
             <?php endforeach; ?>
         <?php endif; ?>
