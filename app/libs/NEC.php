@@ -1,13 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace app\libs;
 
-class NEC
+final class NEC
 {
-    public static string $out = '';
-    public static string $decode = '';
-
-    private static $letters = [
+    private static array $letters = [
         '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
         '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
         ' ', '!', '"', '#', '$', '%', '&', '\'', '(', ')', '*', '+', ',', '-', '.', '/',
